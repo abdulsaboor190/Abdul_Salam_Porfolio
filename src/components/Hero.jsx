@@ -310,31 +310,52 @@ export default function Hero() {
           maxWidth: 600,
         }}
       >
-        {/* Eyebrow */}
-        <motion.p
-          variants={childVariants}
-          style={{
-            fontFamily: 'var(--font-sans)',
-            fontSize: 10,
-            fontWeight: 600,
-            letterSpacing: '0.14em',
-            textTransform: 'uppercase',
-            color: 'var(--text-muted)',
-            margin: 0,
-          }}
-        >
-          Kaplan Beyy (Abdul Salam) · Textile Designer · Karachi
-        </motion.p>
+        {/* Eyebrow & Name Showcase */}
+        <motion.div variants={childVariants} style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
+            <span style={{
+              fontFamily: 'var(--font-sans)',
+              fontSize: 11,
+              fontWeight: 600,
+              letterSpacing: '0.14em',
+              textTransform: 'uppercase',
+              color: 'var(--accent)',
+            }}>
+              Textile Designer · Karachi
+            </span>
+            <span style={{ width: 4, height: 4, borderRadius: '50%', backgroundColor: 'var(--text-muted)' }} />
+            <span style={{
+              fontFamily: 'var(--font-sans)',
+              fontSize: 12,
+              fontWeight: 500,
+              color: 'var(--text-muted)',
+            }}>
+              (Abdul Salam)
+            </span>
+          </div>
 
-        {/* Headline */}
+          <h2 style={{
+            fontFamily: 'var(--font-display)',
+            fontSize: 'clamp(36px, 4.5vw, 56px)',
+            fontWeight: 700,
+            color: 'var(--text-primary)',
+            letterSpacing: '-0.02em',
+            margin: 0,
+            lineHeight: 1.05,
+          }}>
+            Kaplan Beyy
+          </h2>
+        </motion.div>
+
+        {/* Main Headline */}
         <motion.div variants={childVariants}>
           <h1
             style={{
               fontFamily: 'var(--font-display)',
               fontStyle: 'italic',
-              fontSize: 'clamp(44px, 5.5vw, 72px)',
+              fontSize: 'clamp(40px, 5vw, 64px)',
               fontWeight: 700,
-              lineHeight: 1.05,
+              lineHeight: 1.08,
               letterSpacing: '-0.03em',
               color: 'var(--text-primary)',
               margin: 0,
@@ -358,7 +379,7 @@ export default function Hero() {
             lineHeight: 1.75,
             color: 'var(--text-secondary)',
             margin: 0,
-            maxWidth: 480,
+            maxWidth: 490,
           }}
         >
           Fashion illustration, surface pattern design, and sustainable material
