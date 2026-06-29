@@ -136,8 +136,8 @@ export default function Navbar() {
 
         {/* Logo */}
         <div style={{ display: 'flex', alignItems: 'baseline', gap: 6, flexShrink: 0 }}>
-          <span style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 22, fontWeight: 700, color: 'var(--accent)', lineHeight: 1 }}>AS</span>
-          <span style={{ color: 'var(--text-muted)', fontSize: 14, fontWeight: 300 }}>/ Portfolio</span>
+          <span style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 20, fontWeight: 700, color: 'var(--accent)', lineHeight: 1 }}>Kaplan Beyy</span>
+          <span style={{ color: 'var(--text-muted)', fontSize: 13, fontWeight: 300 }}>/ Portfolio</span>
         </div>
 
         {/* Center nav links (desktop) */}

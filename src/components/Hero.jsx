@@ -316,14 +316,14 @@ export default function Hero() {
           style={{
             fontFamily: 'var(--font-sans)',
             fontSize: 10,
-            fontWeight: 500,
+            fontWeight: 600,
             letterSpacing: '0.14em',
             textTransform: 'uppercase',
             color: 'var(--text-muted)',
             margin: 0,
           }}
         >
-          Textile Designer · Karachi, Pakistan
+          Kaplan Beyy (Abdul Salam) · Textile Designer · Karachi
         </motion.p>
 
         {/* Headline */}

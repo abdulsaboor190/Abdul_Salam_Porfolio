@@ -35,11 +35,11 @@ export default function Footer() {
     >
       {/* Row 1 — Logo + tagline */}
       <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', gap: 6 }}>
-        <span style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 32, fontWeight: 700, color: '#C98A3A', lineHeight: 1 }}>
-          AS
+        <span style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 28, fontWeight: 700, color: '#C98A3A', lineHeight: 1 }}>
+          Kaplan Beyy
         </span>
         <span style={{ fontFamily: 'var(--font-sans)', fontSize: 12, color: '#A89880', letterSpacing: '0.06em' }}>
-          Textile Design · Karachi, Pakistan
+          Textile Design · TIP Karachi, Pakistan
         </span>
       </div>
 
@@ -63,7 +63,7 @@ export default function Footer() {
         href="https://www.instagram.com/abdulsalam"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Follow Abdul Salam on Instagram"
+        aria-label="Follow Kaplan Beyy on Instagram"
         whileHover={{ scale: 1.04 }}
         whileTap={{ scale: 0.96 }}
         transition={{ duration: 0.2, ease: 'easeOut' }}
@@ -104,7 +104,7 @@ export default function Footer() {
 
       {/* Row 5 — Copyright */}
       <p style={{ fontFamily: 'var(--font-sans)', fontSize: 11, color: '#6B5E52', textAlign: 'center', margin: 0 }}>
-        © 2025 Abdul Salam · Textile Institute of Pakistan · All rights reserved
+        © 2025 Kaplan Beyy (Abdul Salam) · Textile Institute of Pakistan · All rights reserved
       </p>
     </footer>
   );

@@ -4,12 +4,12 @@ import { useInView } from 'react-intersection-observer';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 const CARDS = [
-  { Icon: Mail,    label: 'Email',    value: 'abdulsalam@example.com',      href: 'mailto:abdulsalam@example.com' },
-  { Icon: Phone,   label: 'Phone',    value: '+92 300 000 0000',            href: 'tel:+923000000000' },
-  { Icon: MapPin,  label: 'Location', value: 'Karachi, Pakistan',           href: null },
+  { Icon: Mail,    label: 'Email',    value: 'kablanbeyyciim@gmail.com',  href: 'mailto:kablanbeyyciim@gmail.com', target: '_self' },
+  { Icon: Phone,   label: 'Phone',    value: '+92 305 3728223',          href: 'tel:+923053728223', target: '_self' },
+  { Icon: MapPin,  label: 'Location', value: 'TIP Karachi, Sindh, PK',   href: 'https://maps.google.com/?q=Textile+Institute+of+Pakistan+Karachi', target: '_blank' },
 ];
 
-const ContactCard = memo(function ContactCard({ Icon, label, value, href, index }) {
+const ContactCard = memo(function ContactCard({ Icon, label, value, href, target, index }) {
   const content = (
     <motion.div
       initial={{ opacity: 0, scale: 0.94 }}
@@ -51,7 +51,7 @@ const ContactCard = memo(function ContactCard({ Icon, label, value, href, index 
   );
 
   return href
-    ? <a href={href} style={{ textDecoration: 'none', display: 'block' }}>{content}</a>
+    ? <a href={href} target={target} rel={target === '_blank' ? 'noopener noreferrer' : undefined} style={{ textDecoration: 'none', display: 'block' }}>{content}</a>
     : content;
 });
 
@@ -75,7 +75,7 @@ export default function Contact() {
             Get in touch
           </h2>
           <p style={{ fontFamily: 'var(--font-sans)', fontSize: 15, color: 'var(--text-secondary)', lineHeight: 1.7, maxWidth: 480, margin: '0 auto' }}>
-            Available for internships, freelance textile design projects, and collaborations.
+            Available for internships, freelance textile design projects, and collaborations with Kaplan Beyy (Abdul Salam).
           </p>
         </motion.div>
 

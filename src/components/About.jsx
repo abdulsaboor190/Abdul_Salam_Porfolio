@@ -175,10 +175,10 @@ function ProfilePhoto() {
           gap: 2,
         }}>
           <span style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 15, fontWeight: 700, color: '#fff', lineHeight: 1 }}>
-            Abdul Salam
+            Kaplan Beyy
           </span>
           <span style={{ fontFamily: 'var(--font-sans)', fontSize: 10, color: 'rgba(255,255,255,0.72)', letterSpacing: '0.06em' }}>
-            Textile Design · TIP Karachi
+            Abdul Salam · TIP Karachi
           </span>
         </div>
       </div>
@@ -215,7 +215,7 @@ export default function About() {
             color: 'var(--text-primary)', letterSpacing: '-0.02em',
             lineHeight: 1.1, margin: 0,
           }}>
-            About Abdul
+            About Kaplan Beyy
           </h2>
 
           {/* Language badges */}
