@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+/* ── Google Fonts loaded via <link> in index.html ── */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ══════════════════════════════════════════════════════
+   DESIGN TOKENS — Light Mode
+══════════════════════════════════════════════════════ */
+:root {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+
+  /* Background */
+  --bg-primary:   #F7F3EE;
+  --bg-secondary: #FFFDF9;
+  --bg-card:      #FFFFFF;
+
+  /* Text */
+  --text-primary:   #1A1714;
+  --text-secondary: #6B6259;
+  --text-muted:     #A8998D;
+
+  /* Accent */
+  --accent:       #B8722A;
+  --accent-teal:  #2A8C6E;
+
+  /* Border */
+  --border: #E0D8CF;
+
+  /* Misc */
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ══════════════════════════════════════════════════════
+   DESIGN TOKENS — Dark Mode
+══════════════════════════════════════════════════════ */
+[data-theme="dark"] {
+  --bg-primary:   #0E0C0A;
+  --bg-secondary: #141210;
+  --bg-card:      #1C1916;
+  --text-primary:   #F0EBE3;
+  --text-secondary: #A89880;
+  --text-muted:     #6B5E52;
+  --accent:       #C98A3A;
+  --accent-teal:  #3DB88A;
+  --border: #2A2520;
+}
+
+/* ══════════════════════════════════════════════════════
+   RESET
+══════════════════════════════════════════════════════ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ══════════════════════════════════════════════════════
+   BODY — background-color + woven linen texture
+   Light pattern: fine diagonal woven grid (rgba 3.5% dark)
+   Dark pattern:  same grid in rgba 3.5% light
+══════════════════════════════════════════════════════ */
+body {
+  background-color: var(--bg-primary);
+  /* Light-mode woven linen SVG data URI */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cline x1='0' y1='16' x2='16' y2='0' stroke='rgba(26,23,20,0.035)' stroke-width='0.5'/%3E%3Cline x1='-4' y1='4' x2='4' y2='-4' stroke='rgba(26,23,20,0.035)' stroke-width='0.5'/%3E%3Cline x1='12' y1='20' x2='20' y2='12' stroke='rgba(26,23,20,0.035)' stroke-width='0.5'/%3E%3Cline x1='0' y1='0' x2='16' y2='16' stroke='rgba(26,23,20,0.035)' stroke-width='0.5'/%3E%3Cline x1='-4' y1='12' x2='4' y2='20' stroke='rgba(26,23,20,0.035)' stroke-width='0.5'/%3E%3Cline x1='12' y1='-4' x2='20' y2='4' stroke='rgba(26,23,20,0.035)' stroke-width='0.5'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-attachment: fixed;
+
+  color: var(--text-primary);
+  min-height: 100svh;
+
+  transition:
+    background-color 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+    color 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+    border-color 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark-mode woven texture override */
+[data-theme="dark"] body {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cline x1='0' y1='16' x2='16' y2='0' stroke='rgba(240,235,227,0.035)' stroke-width='0.5'/%3E%3Cline x1='-4' y1='4' x2='4' y2='-4' stroke='rgba(240,235,227,0.035)' stroke-width='0.5'/%3E%3Cline x1='12' y1='20' x2='20' y2='12' stroke='rgba(240,235,227,0.035)' stroke-width='0.5'/%3E%3Cline x1='0' y1='0' x2='16' y2='16' stroke='rgba(240,235,227,0.035)' stroke-width='0.5'/%3E%3Cline x1='-4' y1='12' x2='4' y2='20' stroke='rgba(240,235,227,0.035)' stroke-width='0.5'/%3E%3Cline x1='12' y1='-4' x2='20' y2='4' stroke='rgba(240,235,227,0.035)' stroke-width='0.5'/%3E%3C/svg%3E");
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ══════════════════════════════════════════════════════
+   TYPOGRAPHY
+══════════════════════════════════════════════════════ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+}
+a:hover { color: var(--accent-teal); }
+
+/* ══════════════════════════════════════════════════════
+   SCROLLBAR
+══════════════════════════════════════════════════════ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* ══════════════════════════════════════════════════════
+   UTILITIES & ANIMATIONS
+══════════════════════════════════════════════════════ */
+
+/* Slow spin for outer ornament rings */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.spin-slow {
+  animation: spinSlow 40s linear infinite;
+}
+
+/* Pulse animation for green status dot */
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%      { transform: scale(1.4); opacity: 0.5; }
+}
+.pulse-dot {
+  animation: pulseDot 2s ease-in-out infinite;
+}
+
+/* Stroke-dasharray draw animation */
+@keyframes drawStroke {
+  to { stroke-dashoffset: 0; }
+}
+.draw-on {
+  animation: drawStroke 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.8s;
+}
