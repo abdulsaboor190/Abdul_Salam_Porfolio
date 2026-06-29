@@ -154,7 +154,7 @@ export default function Navbar() {
           </div>
           <motion.a
             id="navbar-instagram-btn"
-            href="https://www.instagram.com/abdulsalam"
+            href="https://www.instagram.com/kaplan_beyy_/"
             target="_blank" rel="noopener noreferrer"
             aria-label="Instagram"
             whileHover={{ scale: 1.05 }}
@@ -228,7 +228,7 @@ export default function Navbar() {
 
             <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: 16 }}>
               <ThemeToggle />
-              <a href="https://www.instagram.com/abdulsalam" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.instagram.com/kaplan_beyy_/" target="_blank" rel="noopener noreferrer"
                 style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '10px 20px', borderRadius: 99, background: 'linear-gradient(90deg,#833AB4,#E1306C,#FCAF45)', color: '#fff', fontFamily: 'var(--font-sans)', fontSize: 13, fontWeight: 500, textDecoration: 'none', width: 'fit-content' }}>
                 <IgIcon size={14} /> Instagram
               </a>

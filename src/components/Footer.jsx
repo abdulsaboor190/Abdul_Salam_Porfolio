@@ -60,7 +60,7 @@ export default function Footer() {
       {/* Row 3 — Instagram CTA button (centerpiece) */}
       <motion.a
         id="footer-instagram-btn"
-        href="https://www.instagram.com/abdulsalam"
+        href="https://www.instagram.com/kaplan_beyy_/"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Follow Kaplan Beyy on Instagram"
